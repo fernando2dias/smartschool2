@@ -2,10 +2,13 @@ namespace SmartSchool.WebAPI.Models
 {
     public class Aluno
     {
+
         public Aluno()
         {
 
+
         }
+
         public Aluno(int id, string nome, string sobrenome, string telefone)
         {
             this.Id = id;
