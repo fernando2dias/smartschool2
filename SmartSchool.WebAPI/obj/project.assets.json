@@ -1565,11 +1565,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
       "projectName": "SmartSchool.WebAPI",
-      "projectPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
+      "projectPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
       "packagesPath": "C:\\Users\\saofmott\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\obj\\",
+      "outputPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\smartschool.webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\saofmott\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj": {}
+    "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj": {
+    "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
         "projectName": "SmartSchool.WebAPI",
-        "projectPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
+        "projectPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
         "packagesPath": "C:\\Users\\saofmott\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\obj\\",
+        "outputPath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\saofmott\\AppData\\Roaming\\NuGet\\NuGet.Config"

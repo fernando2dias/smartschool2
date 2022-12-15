@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YcynCSVURehpfhzkUxOe/K49UTyS9I721TqNKq0isaPwCPE7OEdSAiqEyFdBMwAeeySf0jlY9lh1ui195zLLog==",
+  "dgSpecHash": "1r7VTLE+z7Au5ebsXyqhX+tuXqArgg5afKCVwXkDgTfXmj2C2HSSlOcc5DthrMhJlV00/7a8MFt10nv/aWxOzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool\\smartschool.webapi\\SmartSchool.WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\saofmott\\Desktop\\projetos\\smartschool2\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\saofmott\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\saofmott\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.1\\microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
