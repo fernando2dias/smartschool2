@@ -10,9 +10,11 @@ namespace SmartSchool.WebAPI.Controllers
     public class ProfessorController : ControllerBase
     {
         private readonly SmartContext _context;
-        public ProfessorController(SmartContext context)
+        private readonly IRepository _repo;
+        public ProfessorController(SmartContext context, IRepository repository)
         {
             _context = context;
+            _repo = repository;
 
         }
 
@@ -45,10 +47,10 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpPost]
         public IActionResult Post(Professor professor)
         {
-            _context.Add(professor);
-            _context.SaveChanges();
-
-            return Ok(professor);
+            _repo.Add(professor);
+            if (_repo.SaveChanges())
+                return Ok(professor);
+            return BadRequest("Erro ao cadastrar =(");
         }
 
         [HttpPut("{id}")]
@@ -58,9 +60,10 @@ namespace SmartSchool.WebAPI.Controllers
             if (prof == null)
                 return BadRequest("Professor não encontrado!");
 
-            _context.Update(professor);
-            _context.SaveChanges();
-            return Ok(professor);
+            _repo.Update(professor);
+            if (_repo.SaveChanges())
+                return Ok(professor);
+            return BadRequest("Erro ao atualizar =(");
         }
 
 
@@ -71,9 +74,10 @@ namespace SmartSchool.WebAPI.Controllers
             if (prof == null)
                 return BadRequest("Professor não encontrado!");
 
-            _context.Update(professor);
-            _context.SaveChanges();
-            return Ok(professor);
+            _repo.Update(professor);
+            if (_repo.SaveChanges())
+                return Ok(professor);
+            return BadRequest("Erro ao atualizar =(");
         }
 
         [HttpDelete("{id}")]
@@ -83,12 +87,11 @@ namespace SmartSchool.WebAPI.Controllers
             if (professor == null)
                 return BadRequest("Professor não encontrado!");
 
-            _context.Remove(professor);
-            _context.SaveChanges();
-            return Ok("Professor Removido");
+            _repo.Delete(professor);
+            if (_repo.SaveChanges())
+                return Ok("Professor removido!");
+            return BadRequest("Erro ao remover =(");
         }
-
-
 
     }
 }

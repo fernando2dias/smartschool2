@@ -11,9 +11,16 @@ builder.Services.AddDbContext<SmartContext>(
         builder.Configuration.GetConnectionString("Default")
     )
 );
+
+//builder.Services.AddSingleton<IRepository, Repository>();
+//builder.Services.AddTransient<IRespository, Repository>();
+builder.Services.AddScoped<IRepository, Repository>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 
 var app = builder.Build();
 
