@@ -9,35 +9,26 @@ namespace SmartSchool.WebAPI.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        private readonly SmartContext _context;
         public readonly IRepository _repo;
-        public AlunoController(SmartContext context, IRepository repo)
+        public AlunoController(IRepository repo)
         {
             _repo = repo;
-            _context = context;
+
 
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Alunos);
+            var result = _repo.GetAllAlunos(true);
+            return Ok(result);
+
         }
 
         [HttpGet("byId/{id}")]
         public IActionResult GetById(int id)
         {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
-            if (aluno == null)
-                return BadRequest("Aluno não encontrado!");
-
-            return Ok(aluno);
-        }
-
-        [HttpGet("byName/{nome}")]
-        public IActionResult GetByName(string nome)
-        {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Nome.Contains(nome) && a.Sobrenome.Contains(nome));
+            var aluno = _repo.GetAlunoById(id, false);
             if (aluno == null)
                 return BadRequest("Aluno não encontrado!");
 
@@ -57,7 +48,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, Aluno aluno)
         {
-            var alu = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var alu = _repo.GetAlunoById(id, false);
             if (alu == null)
                 return BadRequest("Aluno não encontrado!");
 
@@ -71,7 +62,7 @@ namespace SmartSchool.WebAPI.Controllers
         public IActionResult Patch(int id, Aluno aluno)
         {
 
-            var alu = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var alu = _repo.GetAlunoById(id, false);
             if (alu == null)
                 return BadRequest("Aluno não encontrado!");
 
@@ -84,7 +75,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+            var aluno = _repo.GetAlunoById(id, false);
 
             if (aluno == null)
                 return BadRequest("Aluno não encontrado!");
