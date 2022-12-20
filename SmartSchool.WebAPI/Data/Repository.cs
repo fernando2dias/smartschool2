@@ -60,7 +60,7 @@ namespace SmartSchool.WebAPI.Data
             query = query.AsNoTracking().OrderBy(a => a.Id)
                                         .Where(aluno => aluno.Id == alunoId);
 
-            return query.FirstOrDefault();
+            return query.FirstOrDefault()!;
 
         }
         public Aluno[] GetAllAlunosByDisciplinaId(int disciplinaId, bool includeProfessor = false)
